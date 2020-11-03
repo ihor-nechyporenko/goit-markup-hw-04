@@ -154,7 +154,7 @@ footer (secondary bg color) #2F303A */
         color: var(--title-text-color);
     }
 
-    .feature-item {
+    .feature-text {
         margin-bottom: 0px;
         width: 270px;
 
@@ -171,6 +171,33 @@ footer (secondary bg color) #2F303A */
 
     .feature-flexbox li:not(:last-child) {
         margin-right: 30px;
+    }
+
+    .feature-item::before {
+        content: '';
+        display: block;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: var(--primary-button-color);
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .icon-antenna::before {
+        background-image: url(../imeges/icons/antenna.svg);
+    }
+
+    .icon-clock::before {
+        background-image: url(../imeges/icons/clock.svg);
+    }
+
+    .icon-diagram::before {
+        background-image: url(../imeges/icons/diagram.svg);
+    }
+
+    .icon-astronaut::before {
+        background-image: url(../imeges/icons/astronaut.svg);
     }
 
     .specialization-section {
