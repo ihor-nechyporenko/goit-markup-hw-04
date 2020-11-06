@@ -64,6 +64,17 @@ footer (secondary bg color) #2F303A */
         list-style: none;
     }
 
+    .visually-hidden {
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        padding:0 !important;
+        border:0 !important;
+        height: 1px !important; 
+        width: 1px !important; 
+        overflow: hidden;
+    }
+
     .logo {
         font-family: Raleway, sans-serif;
         font-weight: 700;
@@ -404,9 +415,10 @@ footer (secondary bg color) #2F303A */
     }
 
     .contacts-header {
-        display: block;
+        display: flex;
         padding-top: 32px;
         padding-bottom: 32px;
+        align-items: center;
 
         font-family: Roboto, sans-serif;
         font-weight: 500;
@@ -417,10 +429,20 @@ footer (secondary bg color) #2F303A */
         color: var(--primary-text-color);
     }
 
+    .icon-contacts {
+        margin-right: 10px;
+    }
+
     .contacts-header:hover,
     .contacts-header:focus {
         color: var(--accent-color);
+    } 
+
+    .contacts-header:hover .icon-contacts,
+    .contacts-header:focus .icon-contacts {
+        fill: var(--accent-color);
     }
+
 
     /* Clients section */
 
@@ -471,7 +493,7 @@ footer (secondary bg color) #2F303A */
         border-color: var(--accent-color);;
     }
 
-    .clients-list:not(:last-child) {
+    .clients-flexbox > li:not(:last-child) {
         margin-right: 30px;
     }
 
@@ -530,6 +552,50 @@ footer (secondary bg color) #2F303A */
     .contacts-footer + .contacts-footer { 
         margin-top: 9px;
     }
+
+    .join {
+        margin-bottom: 20px;
+
+        font-family: Roboto, sans-serif;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+
+        text-transform: uppercase;
+        color: var(--primary-bg-color);
+    }
+
+    .our-social-links {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        fill: var(--primary-bg-color);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .our-social-links:hover,
+    .our-social-links:focus {
+        background-color: var(--accent-color);
+    }
+
+    .footer-flexbox {
+        display: flex;
+    }
+
+    .address-container {
+        margin-right: 70px;
+    }
+
+    .join-container {
+        padding-top: 12px;
+    }
+
+
 
     /* ./Portfolio.html */
 
